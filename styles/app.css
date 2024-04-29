@@ -1,0 +1,141 @@
+/* App Fonts */
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Inter SemiBold";
+    src: url("../fonts/Inter-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Inter Bold";
+    src: url("../fonts/Inter-Bold.ttf") format("truetype");
+}
+
+/* Variables */
+:root {
+    --Primary-Color: hsl(75, 94%, 57%);
+    --White-Color : hsl(0, 0%, 100%);
+    --Grey-Color : hsl(0, 0%, 20%);
+    --Dark-Grey : hsl(0, 0%, 12%);
+    --Off-Black : hsl(0, 0%, 8%);
+}
+
+/* Basic Preparation */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /*  10px  */
+}
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+/* Body and Container */
+body {
+    font-family: "Inter";
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Off-Black);
+}
+.container {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Reset Properties */
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Start Project */
+.main {
+
+}
+.wrapper {
+    background-color: var(--Dark-Grey);
+    border-radius: 1rem;
+    padding: 4rem;
+    width: 40rem;
+}
+.user__image {
+    width: 8rem;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.user__img {
+    width: 100%;
+}
+.user__details {
+    text-align: center;
+    margin-top: 3rem;
+}
+.user__name {
+    color: var(--White-Color);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.user__location {
+    color: var(--Primary-Color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.user__occupation {
+    color: var(--White-Color);
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+.user__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+.user__social-item {
+    background-color: var(--Grey-Color);
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+.user__social-item:hover {
+    background-color: var(--Primary-Color);
+    box-shadow: 0 0 2rem var(--Primary-Color);
+}
+.user__social-item:hover .user__social-link {
+    color: var(--Off-Black);
+}
+.user__social-link {
+    color: var(--White-Color);
+    font-weight: 700;
+    transition: all 150ms ease-in;
+}
+
+/* Responsive */
+@media only screen and (max-width: 450px){
+    .main {
+        padding: 2rem;
+    }
+    .wrapper {
+        width: 100%;
+        padding: 2rem;
+    }
+}
